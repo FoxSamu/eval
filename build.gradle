@@ -19,10 +19,6 @@ test {
     useJUnitPlatform()
 }
 
-test {
-    useJUnitPlatform()
-}
-
 task sourceJar(type: Jar) {
     classifier 'sources'
     from sourceSets.main.allJava
@@ -32,7 +28,7 @@ publishing {
     publications {
         maven(MavenPublication) {
             groupId = project.group
-            artifactId = 'json'
+            artifactId = 'eval'
             version = project.version
 
             from components.java
